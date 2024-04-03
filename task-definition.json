@@ -7,7 +7,7 @@
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "flk_lon_app-5000-tcp",
+                    "name": "flk_lon_app",
                     "containerPort": 5000,
                     "hostPort": 5000,
                     "protocol": "tcp",
