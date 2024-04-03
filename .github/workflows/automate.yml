@@ -11,6 +11,8 @@ env:
   ECS_CLUSTER: flp_ap
   ECS_TASK_DEFINITION: task-definition.json
 
+  CONTAINER_NAME: flk_lon_app
+
 jobs:
   job1:
     runs-on: ubuntu-latest
