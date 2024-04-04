@@ -6,12 +6,11 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: flp_app
-  ECS_SERVICE: flp_app_service
-  ECS_CLUSTER: flp_ap
+  ECR_REPOSITORY: loan_approval
+  ECS_CLUSTER: loan_approving_cluster
   ECS_TASK_DEFINITION: task-definition.json
 
-  CONTAINER_NAME: flk_lon_app
+  CONTAINER_NAME: loan_approving_container
 
 jobs:
   job1:
