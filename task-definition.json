@@ -1,15 +1,17 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:180596344418:task-definition/flp_appp:1",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:180596344418:task-definition/loan_approving_tast_def:1",
     "containerDefinitions": [
         {
-            "name": "flk_lon_app",
-            "image": "180596344418.dkr.ecr.us-east-1.amazonaws.com/flp_app:latest",
+            "name": "loan_approving_container",
+            "image": "180596344418.dkr.ecr.us-east-1.amazonaws.com/loan_approval:latest",
             "cpu": 0,
             "portMappings": [
                 {
+                    "name": "fa_port",
                     "containerPort": 5000,
                     "hostPort": 5000,
-                    "protocol": "tcp"
+                    "protocol": "tcp",
+                    "appProtocol": "http"
                 }
             ],
             "essential": true,
@@ -22,7 +24,7 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/flp_appp",
+                    "awslogs-group": "/ecs/loan_approving_tast_def",
                     "awslogs-region": "us-east-1",
                     "awslogs-stream-prefix": "ecs"
                 },
@@ -31,7 +33,7 @@
             "systemControls": []
         }
     ],
-    "family": "flp_appp",
+    "family": "loan_approving_tast_def",
     "executionRoleArn": "arn:aws:iam::180596344418:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -77,7 +79,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-04-03T13:37:40.913Z",
-    "registeredBy": "arn:aws:iam::180596344418:root",
+    "registeredAt": "2024-04-04T06:50:25.968Z",
+    "registeredBy": "arn:aws:iam::180596344418:user/SaiVihM@IAM1",
     "tags": []
 }
